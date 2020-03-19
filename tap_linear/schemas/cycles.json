@@ -1,0 +1,46 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "id": {
+            "type": ["string"]
+        },
+        "name": {
+            "type": ["null", "string"]
+        },
+        "number": {
+            "type": ["null", "integer"]
+        },
+        "completedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "startsAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "endsAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "team": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                }
+            }
+        },
+        "updatedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        }
+    }
+}

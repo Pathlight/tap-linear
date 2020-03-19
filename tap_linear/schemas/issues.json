@@ -1,0 +1,220 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "title": {
+            "type": ["null", "string"]
+        },
+        "number": {
+            "type": ["null", "integer"]
+        },
+        "url": {
+            "type": ["null", "string"]
+        },
+        "id": {
+            "type": ["string"]
+        },
+        "team": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                }
+            }
+        },
+        "labels": {
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "id": {
+                        "type": ["string"]
+                    },
+                    "name": {
+                        "type": ["null", "string"]
+                    },
+                    "description": {
+                        "type": ["null", "string"]
+                    }
+                }
+            }
+        },
+        "state": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "position": {
+                    "type": ["null", "string"]
+                },
+                "type": {
+                    "type": ["null", "string"]
+                }
+            }
+        },
+        "assignee": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "displayName": {
+                    "type": ["null", "string"]
+                },
+                "email": {
+                    "type": ["null", "string"]
+                }
+            }
+        },
+        "parent": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "title": {
+                    "type": ["null", "string"]
+                }
+            }
+        },
+        "cycle": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "number": {
+                    "type": ["null", "integer"]
+                },
+                "completedAt": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                },
+                "startsAt": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                },
+                "endsAt": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                }
+            }
+        },
+        "project": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "description": {
+                    "type": ["null", "string"]
+                },
+                "slugId": {
+                    "type": ["null", "string"]
+                },
+                "targetDate": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                },
+                "startedAt": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                },
+                "completedAt": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                },
+                "canceledAt": {
+                    "type": ["null", "string"],
+                    "format": "date-time"
+                }
+            }
+        },
+        "creator": {
+            "type": ["null", "object"],
+            "properties": {
+                "id": {
+                    "type": ["string"]
+                },
+                "name": {
+                    "type": ["null", "string"]
+                },
+                "displayName": {
+                    "type": ["null", "string"]
+                },
+                "email": {
+                    "type": ["null", "string"]
+                }
+            }
+        },
+        "comments": {
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "id": {
+                        "type": ["string"]
+                    },
+                    "body": {
+                        "type": ["null", "string"]
+                    },
+                    "user": {
+                        "type": ["null", "object"],
+                        "properties": {
+                            "id": {
+                                "type": ["string"]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "startedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "completedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "canceledAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "priority": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "estimate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "updatedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "id": {
+            "type": ["string"]
+        },
+        "name": {
+            "type": ["null", "string"]
+        },
+        "timezone": {
+            "type": ["null", "string"]
+        },
+        "description": {
+            "type": ["null", "string"]
+        },
+        "key": {
+            "type": ["null", "string"]
+        },
+        "memberships": {
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "user": {
+                        "type": ["null", "object"],
+                        "properties": {
+                            "name": {
+                                "type": ["null", "string"]
+                            },
+                            "id": {
+                                "type": ["string"]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "updatedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        }
+    }
+}

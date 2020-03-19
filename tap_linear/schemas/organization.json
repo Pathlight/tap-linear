@@ -1,0 +1,23 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "id": {
+            "type": ["string"]
+        },
+        "name": {
+            "type": ["null", "string"]
+        },
+        "updatedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        }
+    }
+}

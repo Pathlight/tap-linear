@@ -1,0 +1,54 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "id": {
+            "type": ["string"]
+        },
+        "name": {
+            "type": ["null", "string"]
+        },
+        "displayName": {
+            "type": ["null", "string"]
+        },
+        "email": {
+            "type": ["null", "string"]
+        },
+        "admin": {
+            "type": ["null", "boolean"]
+        },
+        "active": {
+            "type": ["null", "boolean"]
+        },
+        "teamMemberships": {
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "team": {
+                        "type": ["null", "object"],
+                        "properties": {
+                            "name": {
+                                "type": ["null", "string"]
+                            },
+                            "id": {
+                                "type": ["string"]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "updatedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        }
+    }
+}

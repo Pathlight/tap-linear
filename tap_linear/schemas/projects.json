@@ -1,0 +1,59 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "id": {
+            "type": ["string"]
+        },
+        "name": {
+            "type": ["null", "string"]
+        },
+        "description": {
+            "type": ["null", "string"]
+        },
+        "slugId": {
+            "type": ["null", "string"]
+        },
+        "state": {
+            "type": ["null", "string"]
+        },
+        "targetDate": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "completedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "startedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "canceledAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "teams": {
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "id": {
+                        "type": ["string"]
+                    }
+                }
+            }
+        },
+        "updatedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        }
+    }
+}
