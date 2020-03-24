@@ -11,7 +11,7 @@
             "type": ["null", "string"]
         },
         "position": {
-            "type": ["null", "string"]
+            "type": ["null", "integer"]
         },
         "type": {
             "type": ["null", "string"]

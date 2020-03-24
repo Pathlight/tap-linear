@@ -57,6 +57,12 @@ def discover():
 def sync(config, state, catalog):
     """ Sync data from tap source """
     # Loop over selected streams in catalog
+    def remove_nodes(row):
+        new_row = row
+        for key, value in row.items():
+            if isinstance(value, dict) and list(value.keys()) == ['nodes']:
+                new_row[key] = value['nodes']
+        return new_row
     client = GraphQLClient(config)
 
     for stream in catalog.get_selected_streams(state):
@@ -79,8 +85,8 @@ def sync(config, state, catalog):
         max_bookmark = None
         for row in tap_data:
             # TODO: place type conversions or transformations here
-
             # write one or more rows to the stream:
+            row = remove_nodes(row)
             singer.write_records(stream.tap_stream_id, [row])
         #     if bookmark_column:
         #         if is_sorted:
