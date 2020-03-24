@@ -51,7 +51,7 @@
                     "type": ["null", "string"]
                 },
                 "position": {
-                    "type": ["null", "string"]
+                    "type": ["null", "integer"]
                 },
                 "type": {
                     "type": ["null", "string"]
@@ -197,12 +197,10 @@
             "format": "date-time"
         },
         "priority": {
-            "type": ["null", "string"],
-            "format": "date-time"
+            "type": ["null", "integer"]
         },
         "estimate": {
-            "type": ["null", "string"],
-            "format": "date-time"
+            "type": ["null", "integer"]
         },
         "updatedAt": {
             "type": ["null", "string"],
