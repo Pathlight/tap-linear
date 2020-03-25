@@ -13,6 +13,9 @@
                 "name": {
                     "type": ["null", "string"]
                 },
+                "email": {
+                    "type": ["null", "string"]
+                },
                 "id": {
                     "type": ["string"]
                 }
