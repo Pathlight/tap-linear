@@ -34,15 +34,14 @@ def discover():
     for stream_id, schema in raw_schemas.items():
         # TODO: populate any metadata and stream's key properties here..
         stream_metadata = []
-        key_properties = []
         streams.append(
             CatalogEntry(
                 tap_stream_id=stream_id,
                 stream=stream_id,
                 schema=schema,
-                key_properties=key_properties,
+                key_properties=['id'],
                 metadata=stream_metadata,
-                replication_key='createdAt',
+                replication_key=None,
                 is_view=None,
                 database=None,
                 table=None,
@@ -74,7 +73,7 @@ def sync(config, state, catalog):
         singer.write_schema(
             stream_name=stream.tap_stream_id,
             schema=stream.schema.to_dict(),
-            key_properties=stream.key_properties,
+            key_properties=['id'],
         )
 
         # TODO: delete and replace this inline function with your own data retrieval process:
