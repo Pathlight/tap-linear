@@ -4,6 +4,9 @@
         "title": {
             "type": ["null", "string"]
         },
+        "description": {
+            "type": ["null", "string"]
+        },
         "number": {
             "type": ["null", "integer"]
         },
