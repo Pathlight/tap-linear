@@ -1,0 +1,11 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "team_id": {
+            "type": ["string"]
+        },
+        "project_id": {
+            "type": ["string"]
+        }
+    }
+}

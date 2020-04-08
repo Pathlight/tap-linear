@@ -27,23 +27,6 @@
                 }
             }
         },
-        "labels": {
-            "type": ["null", "array"],
-            "items": {
-                "type": ["null", "object"],
-                "properties": {
-                    "id": {
-                        "type": ["string"]
-                    },
-                    "name": {
-                        "type": ["null", "string"]
-                    },
-                    "description": {
-                        "type": ["null", "string"]
-                    }
-                }
-            }
-        },
         "state": {
             "type": ["null", "object"],
             "properties": {

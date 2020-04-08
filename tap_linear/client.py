@@ -22,7 +22,6 @@ class GraphQLClient:
             transport=sample_transport,
             fetch_schema_from_transport=True,
         )
-        
     def get(self, name, schema, is_singular=False):
         # `is_singular` is a way to deal with Linear's implementation of 'connections'.
         done = False
@@ -64,3 +63,26 @@ class GraphQLClient:
         gql_properties = properties_to_gql(root_name, schema, is_singular)
         gql_string = f'''query {{ {gql_properties} }}'''
         return gql_string
+    def get_join_through_data(self, name, join_data):
+        query_string = f'''query {{
+            {join_data["tables"][0]}  {{
+                nodes {{
+                    id
+                    {join_data["field"]} {{
+                        nodes {{
+                            id
+                        }}
+                    }}
+                }}
+            }}
+        }}'''
+        query = gql(query_string)
+        res = self.client.execute(query)
+        table_data = []
+        for node in res[join_data["tables"][0]]['nodes']:
+            for related_node in node[join_data['field']]['nodes']:
+                table_data.append({
+                    f'{join_data["tables"][0][:-1]}_id': node['id'],
+                    f'{join_data["tables"][1][:-1]}_id': related_node['id'],
+                })
+        return table_data

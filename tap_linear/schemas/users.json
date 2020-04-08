@@ -19,25 +19,6 @@
         "active": {
             "type": ["null", "boolean"]
         },
-        "teamMemberships": {
-            "type": ["null", "array"],
-            "items": {
-                "type": ["null", "object"],
-                "properties": {
-                    "team": {
-                        "type": ["null", "object"],
-                        "properties": {
-                            "name": {
-                                "type": ["null", "string"]
-                            },
-                            "id": {
-                                "type": ["string"]
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "updatedAt": {
             "type": ["null", "string"],
             "format": "date-time"

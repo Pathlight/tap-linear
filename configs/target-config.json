@@ -1,0 +1,8 @@
+{
+    "host": "0.tcp.ngrok.io",
+    "user":"lloyd",
+    "port":"14335",
+    "password":"lloyd",
+    "dbname":"dw",
+    "schema":"tap_linear"
+}

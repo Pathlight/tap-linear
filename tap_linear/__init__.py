@@ -11,6 +11,20 @@ from .client import GraphQLClient
 
 REQUIRED_CONFIG_KEYS = ["base_url", "api_key"]
 LOGGER = singer.get_logger()
+JOIN_TABLES = {
+    'memberships': {
+        'tables': ['teams', 'users'],
+        'field': 'memberships'
+    },
+    'issue_labels': {
+        'tables': ['issues', 'labels'],
+        'field': 'labels'
+    },
+    'project_team': {
+        'tables': ['projects', 'teams'],
+        'field': 'teams'
+    }
+}
 
 
 def get_abs_path(path):
@@ -75,27 +89,14 @@ def sync(config, state, catalog):
             schema=stream.schema.to_dict(),
             key_properties=['id'],
         )
-
-        # TODO: delete and replace this inline function with your own data retrieval process:
-        tap_data = client.get(stream.tap_stream_id, stream.schema.to_dict(), is_singular=(stream.tap_stream_id[-1]!='s'))
-    # print(organization)
-
-
+        if stream.tap_stream_id in JOIN_TABLES:
+            tap_data = client.get_join_through_data(stream.tap_stream_id, JOIN_TABLES[stream.tap_stream_id])
+        else: 
+            tap_data = client.get(stream.tap_stream_id, stream.schema.to_dict(), is_singular=(stream.tap_stream_id[-1]!='s'))
         max_bookmark = None
         for row in tap_data:
-            # TODO: place type conversions or transformations here
-            # write one or more rows to the stream:
             row = remove_nodes(row)
             singer.write_records(stream.tap_stream_id, [row])
-        #     if bookmark_column:
-        #         if is_sorted:
-        #             # update bookmark to latest value
-        #             singer.write_state({stream.tap_stream_id: row[bookmark_column]})
-        #         else:
-        #             # if data unsorted, save max value until end of writes
-        #             max_bookmark = max(max_bookmark, row[bookmark_column])
-        # if bookmark_column and not is_sorted:
-        #     singer.write_state({stream.tap_stream_id: max_bookmark})
     return
 
 

@@ -16,25 +16,6 @@
         "key": {
             "type": ["null", "string"]
         },
-        "memberships": {
-            "type": ["null", "array"],
-            "items": {
-                "type": ["null", "object"],
-                "properties": {
-                    "user": {
-                        "type": ["null", "object"],
-                        "properties": {
-                            "name": {
-                                "type": ["null", "string"]
-                            },
-                            "id": {
-                                "type": ["string"]
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "updatedAt": {
             "type": ["null", "string"],
             "format": "date-time"

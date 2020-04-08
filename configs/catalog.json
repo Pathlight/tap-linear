@@ -1,0 +1,1151 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "comments",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "body": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "user": {
+            "properties": {
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "id": {
+                "type": [
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "issue": {
+            "properties": {
+              "title": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "number": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "url": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "team": {
+                "properties": {
+                  "id": {
+                    "type": [
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  }
+                },
+                "type": [
+                  "null",
+                  "object"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "comments",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "teams",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timezone": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "key": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "teams",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "users",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "admin": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "active": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "users",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "memberships",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "team_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "user_id": {
+            "type": [
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "memberships",
+      "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "projects",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "slugId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "state": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "targetDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "completedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "startedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "canceledAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "teams": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "string"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "projects",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "issue_labels",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "issue_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "label_id": {
+            "type": [
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "issue_labels",
+      "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "issues",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "number": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "url": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "team": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "state": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "position": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "type": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "assignee": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "displayName": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "parent": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "title": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "cycle": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "number": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "completedAt": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "startsAt": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "endsAt": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "project": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "slugId": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "targetDate": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "startedAt": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "completedAt": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "canceledAt": {
+                "format": "date-time",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "creator": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              },
+              "name": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "displayName": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "email": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "comments": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": [
+                    "string"
+                  ]
+                },
+                "body": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "user": {
+                  "properties": {
+                    "id": {
+                      "type": [
+                        "string"
+                      ]
+                    },
+                    "email": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "type": [
+                    "null",
+                    "object"
+                  ]
+                }
+              },
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "startedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "completedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "canceledAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "priority": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "estimate": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "issues",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "cycles",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "number": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "completedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "startsAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endsAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "team": {
+            "properties": {
+              "id": {
+                "type": [
+                  "string"
+                ]
+              }
+            },
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "cycles",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "project_team",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "team_id": {
+            "type": [
+              "string"
+            ]
+          },
+          "project_id": {
+            "type": [
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "project_team",
+      "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "organization",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "organization",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "issueLabels",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "issueLabels",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    },
+    {
+      "tap_stream_id": "workflowStates",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": [
+              "string"
+            ]
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "position": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "archivedAt": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "workflowStates",
+          "metadata": [{
+        "metadata": {
+            "selected": true
+        },
+        "breadcrumb": []
+    }]
+    }
+  ]
+}

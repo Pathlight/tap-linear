@@ -1,0 +1,11 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "issue_id": {
+            "type": ["string"]
+        },
+        "label_id": {
+            "type": ["string"]
+        }
+    }
+}
