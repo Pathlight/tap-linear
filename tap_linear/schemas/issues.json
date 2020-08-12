@@ -8,7 +8,7 @@
             "type": ["null", "string"]
         },
         "number": {
-            "type": ["null", "integer"]
+            "type": ["null", "number"]
         },
         "url": {
             "type": ["null", "string"]
@@ -54,7 +54,7 @@
                     "type": ["null", "string"]
                 },
                 "position": {
-                    "type": ["null", "integer"]
+                    "type": ["null", "number"]
                 },
                 "type": {
                     "type": ["null", "string"]
@@ -99,7 +99,7 @@
                     "type": ["null", "string"]
                 },
                 "number": {
-                    "type": ["null", "integer"]
+                    "type": ["null", "number"]
                 },
                 "completedAt": {
                     "type": ["null", "string"],
@@ -203,10 +203,10 @@
             "format": "date-time"
         },
         "priority": {
-            "type": ["null", "integer"]
+            "type": ["null", "number"]
         },
         "estimate": {
-            "type": ["null", "integer"]
+            "type": ["null", "number"]
         },
         "updatedAt": {
             "type": ["null", "string"],

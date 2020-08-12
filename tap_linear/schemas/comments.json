@@ -28,7 +28,7 @@
                     "type": ["null", "string"]
                 },
                 "number": {
-                    "type": ["null", "integer"]
+                    "type": ["null", "number"]
                 },
                 "url": {
                     "type": ["null", "string"]
