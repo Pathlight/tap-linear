@@ -8,7 +8,7 @@
             "type": ["null", "string"]
         },
         "number": {
-            "type": ["null", "integer"]
+            "type": ["null", "number"]
         },
         "completedAt": {
             "type": ["null", "string"],
