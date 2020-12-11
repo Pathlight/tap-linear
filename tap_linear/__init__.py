@@ -8,7 +8,6 @@ from singer.schema import Schema
 from .client import GraphQLClient
 
 
-
 REQUIRED_CONFIG_KEYS = ["base_url", "api_key"]
 LOGGER = singer.get_logger()
 
@@ -31,15 +30,20 @@ def load_schemas():
 def discover():
     raw_schemas = load_schemas()
     streams = []
+    key_properties = ['id']
     for stream_id, schema in raw_schemas.items():
-        # TODO: populate any metadata and stream's key properties here..
-        stream_metadata = []
+        stream_metadata = metadata.get_standard_metadata(
+            schema=schema.to_dict(),
+            key_properties=key_properties,
+            valid_replication_keys=None,
+            replication_method=None
+        )
         streams.append(
             CatalogEntry(
                 tap_stream_id=stream_id,
                 stream=stream_id,
                 schema=schema,
-                key_properties=['id'],
+                key_properties=key_properties,
                 metadata=stream_metadata,
                 replication_key=None,
                 is_view=None,
